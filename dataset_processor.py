@@ -98,11 +98,4 @@ class DatasetProcessor:
         train_data.push_to_hub(self.params.huggingface_dataset_name,
                                token=self.params.huggingface_token)
 
-        print(f'Updated dataset {self.params.huggingface_dataset_name}')
-
-params = DatasetProcessorParams()
-params.input_directory = "/home/nass/Desktop/workspace/first-diffusion-model/groove/drummer1/session1/"
-params.output_directory = "."
-params.huggingface_dataset_name = "lloydoad/drum-spectrogram-dataset"
-params.huggingface_token = "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"
-DatasetProcessor(params=params).run()
+        print(f'Updated dataset: {self.params.huggingface_dataset_name}')
